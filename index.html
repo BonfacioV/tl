@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1157,7 +1155,7 @@
             margin-bottom: 10px;
             border-left: 5px solid var(--success);
             transition: all 0.3s;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
         }
 
         .transaction-card.expense {
@@ -1364,7 +1362,7 @@
             max-height: 200px;
             overflow-y: auto;
             z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             display: none;
         }
 
@@ -1578,7 +1576,8 @@
 
             <div class="card">
                 <div class="card-header">Quick Actions</div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 15px;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; padding: 15px;">
                     <button class="btn btn-primary" onclick="switchTab('attendance')">
                         <i class="fas fa-clipboard-check"></i> Mark Attendance
                     </button>
@@ -1797,8 +1796,10 @@
             <div class="card">
                 <div class="card-header">Notes</div>
                 <div style="padding: 15px; font-size: 0.9rem;">
-                    <p><strong>Note:</strong> Overtime hours are entered manually. Monday-Thursday: 9 normal hours. Friday: 6 hours + 3.5 overtime. Weekend: all overtime.</p>
-                    <p><strong>Export:</strong> Client report shows only essential columns. Full report includes all data.</p>
+                    <p><strong>Note:</strong> Overtime hours are entered manually. Monday-Thursday: 9 normal hours.
+                        Friday: 6 hours + 3.5 overtime. Weekend: all overtime.</p>
+                    <p><strong>Export:</strong> Client report shows only essential columns. Full report includes all
+                        data.</p>
                 </div>
             </div>
         </section>
@@ -1907,7 +1908,8 @@
 
                     <div class="form-group multiselect-container" style="flex: 2; min-width: 300px;">
                         <label>Select Sites (Multiple)</label>
-                        <div class="multiselect-input" style="padding: 10px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; background: white;"
+                        <div class="multiselect-input"
+                            style="padding: 10px; border: 1px solid var(--border); border-radius: 6px; cursor: pointer; background: white;"
                             onclick="toggleMultiSelect('sitesMultiSelect')">
                             <span id="sitesMultiSelectLabel">Click to select sites</span>
                             <i class="fas fa-chevron-down" style="float: right;"></i>
@@ -1947,7 +1949,8 @@
                             <!-- Combined payroll will be populated here -->
                         </tbody>
                         <tfoot>
-                            <tr style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+                            <tr
+                                style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
                                 <td colspan="5" style="text-align: right; font-weight: bold;">TOTAL:</td>
                                 <td id="combinedTotalGross">R0</td>
                                 <td id="combinedTotalLoans">R0</td>
@@ -1999,7 +2002,8 @@
                             <!-- Payments will be populated here -->
                         </tbody>
                         <tfoot>
-                            <tr style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
+                            <tr
+                                style="background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white;">
                                 <td colspan="2" style="text-align: right; font-weight: bold;">TOTAL:</td>
                                 <td id="paymentsTotalNet" style="font-weight: bold;">R0</td>
                                 <td id="paymentsStatusSummary"></td>
@@ -2221,7 +2225,8 @@
 
                             <div style="margin-bottom: 15px;">
                                 <h4>Recurring Monthly</h4>
-                                <div id="recurringMonthly" style="font-size: 1.5rem; font-weight: bold; color: var(--warning);">R0</div>
+                                <div id="recurringMonthly"
+                                    style="font-size: 1.5rem; font-weight: bold; color: var(--warning);">R0</div>
                             </div>
 
                             <div style="margin-bottom: 15px;">
@@ -2421,7 +2426,7 @@
                             <option value="Nedbank">Nedbank</option>
                             <option value="Capitec">Capitec</option>
                             <option value="Tymebank">Tymebank</option>
-                            <option value="Bank Zero">Bank Zero</option>
+                            <option value="Bidvest Bank Old Mutual">Bidvest Bank Old Mutual</option>
                             <option value="Discovery Bank">Discovery Bank</option>
                             <option value="African Bank">African Bank</option>
                             <option value="Investec">Investec</option>
@@ -2490,7 +2495,8 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="last-updated" id="ratesUpdated" style="font-size: 0.9rem; margin-top: 10px; color: var(--dark);">
+                <div class="last-updated" id="ratesUpdated"
+                    style="font-size: 0.9rem; margin-top: 10px; color: var(--dark);">
                     Rates last updated: Not yet saved
                 </div>
             </div>
@@ -3188,7 +3194,7 @@
             renderAll();
             updateFortnightSelectors();
             populateRatesTable();
-            
+
             // Refresh current view
             const activeSection = document.querySelector('.content-section.active');
             if (activeSection) {
@@ -3203,7 +3209,7 @@
                     loadTransactions();
                 }
             }
-            
+
             showNotification('Data refreshed successfully', 'success');
         }
 
@@ -3256,9 +3262,9 @@
         // Setup event listeners
         function setupEventListeners() {
             document.getElementById('fortnightStartDate').addEventListener('change', updateFortnightEndDate);
-            
+
             // Recurring expense toggle
-            document.getElementById('expenseRecurring').addEventListener('change', function() {
+            document.getElementById('expenseRecurring').addEventListener('change', function () {
                 document.getElementById('recurringOptions').style.display = this.checked ? 'block' : 'none';
             });
         }
@@ -3494,7 +3500,7 @@
 
             // Calculate actual payroll from attendance for each role
             let attendanceRecords = appData.attendance.filter(record => record.status === 'P');
-            
+
             if (siteId && siteId !== 'all') {
                 attendanceRecords = attendanceRecords.filter(record => record.siteId === siteId);
             }
@@ -3689,7 +3695,7 @@
                             <option value="Nedbank" ${worker.bank === 'Nedbank' ? 'selected' : ''}>Nedbank</option>
                             <option value="Capitec" ${worker.bank === 'Capitec' ? 'selected' : ''}>Capitec</option>
                             <option value="Tymebank" ${worker.bank === 'Tymebank' ? 'selected' : ''}>Tymebank</option>
-                            <option value="Bank Zero" ${worker.bank === 'Bank Zero' ? 'selected' : ''}>Bank Zero</option>
+                            <option value="Bidvest Bank Old Mutual" ${worker.bank === 'Bidvest Bank Old Mutual' ? 'selected' : ''}>Bidvest Bank Old Mutual</option>
                             <option value="Discovery Bank" ${worker.bank === 'Discovery Bank' ? 'selected' : ''}>Discovery Bank</option>
                             <option value="African Bank" ${worker.bank === 'African Bank' ? 'selected' : ''}>African Bank</option>
                             <option value="Investec" ${worker.bank === 'Investec' ? 'selected' : ''}>Investec</option>
@@ -3755,8 +3761,8 @@
                 const surname = cells[1].textContent.toLowerCase();
                 const idNumber = cells[2].textContent.toLowerCase();
                 const role = cells[3].textContent.toLowerCase();
-                
-                if (name.includes(searchTerm) || surname.includes(searchTerm) || 
+
+                if (name.includes(searchTerm) || surname.includes(searchTerm) ||
                     idNumber.includes(searchTerm) || role.includes(searchTerm)) {
                     row.style.display = '';
                 } else {
@@ -4086,10 +4092,10 @@
                 const select = document.getElementById(selectorId);
                 if (select) {
                     const currentValue = select.value;
-                    const isAllSites = selectorId.includes('Filter') || 
-                                     selectorId === 'expenseSite' || 
-                                     selectorId === 'incomeSite' || 
-                                     selectorId === 'recurringSite';
+                    const isAllSites = selectorId.includes('Filter') ||
+                        selectorId === 'expenseSite' ||
+                        selectorId === 'incomeSite' ||
+                        selectorId === 'recurringSite';
 
                     select.innerHTML = isAllSites ? '<option value="all">All Sites</option>' : '<option value="">Select Site</option>';
 
@@ -4119,26 +4125,26 @@
             const dropdown = document.getElementById('sitesMultiSelectDropdown');
             const tagsContainer = document.getElementById('sitesMultiSelectTags');
             const label = document.getElementById('sitesMultiSelectLabel');
-            
+
             dropdown.innerHTML = '';
             tagsContainer.innerHTML = '';
-            
+
             appData.sites
                 .filter(s => s.active)
                 .sort((a, b) => a.name.localeCompare(b.name))
                 .forEach(site => {
                     const isSelected = appData.selectedSites.includes(site.id);
-                    
+
                     // Add to dropdown
                     const option = document.createElement('div');
                     option.className = `multiselect-option ${isSelected ? 'selected' : ''}`;
                     option.textContent = site.name;
                     option.dataset.siteId = site.id;
-                    option.onclick = function() {
+                    option.onclick = function () {
                         toggleSiteSelection(site.id);
                     };
                     dropdown.appendChild(option);
-                    
+
                     // Add tag if selected
                     if (isSelected) {
                         const tag = document.createElement('div');
@@ -4150,7 +4156,7 @@
                         tagsContainer.appendChild(tag);
                     }
                 });
-            
+
             // Update label
             if (appData.selectedSites.length === 0) {
                 label.textContent = 'Click to select sites';
@@ -4186,7 +4192,7 @@
         function toggleMultiSelect(dropdownId) {
             const dropdown = document.getElementById(dropdownId + 'Dropdown');
             dropdown.classList.toggle('active');
-            
+
             // Close other dropdowns
             document.querySelectorAll('.multiselect-dropdown').forEach(d => {
                 if (d.id !== dropdownId + 'Dropdown') {
@@ -4196,7 +4202,7 @@
         }
 
         // Close multi-select dropdowns when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', function (event) {
             if (!event.target.closest('.multiselect-container')) {
                 document.querySelectorAll('.multiselect-dropdown').forEach(d => {
                     d.classList.remove('active');
@@ -4349,9 +4355,9 @@
             if (!confirm('Remove this worker from attendance? This will not delete the worker, just remove them from this site\'s attendance.')) return;
 
             // Remove site assignment
-            const assignmentIndex = appData.siteAssignments.findIndex(a => 
-                a.workerId === workerId && 
-                a.siteId === siteId && 
+            const assignmentIndex = appData.siteAssignments.findIndex(a =>
+                a.workerId === workerId &&
+                a.siteId === siteId &&
                 !a.endDate
             );
 
@@ -4360,7 +4366,7 @@
             }
 
             // Remove attendance records for this worker at this site
-            appData.attendance = appData.attendance.filter(a => 
+            appData.attendance = appData.attendance.filter(a =>
                 !(a.workerId === workerId && a.siteId === siteId)
             );
 
@@ -4710,11 +4716,11 @@
             // Header
             doc.setFillColor(26, 54, 93);
             doc.rect(0, 0, 297, 20, 'F');
-            
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(16);
             doc.text('TONNY LAYS CONSTRUCTION - ATTENDANCE REGISTER', 148, 12, { align: 'center' });
-            
+
             doc.setFontSize(12);
             doc.text(`Site: ${site.name}`, 10, 30);
             doc.text(`Period: ${formatDate(fortnight.startDate)} - ${formatDate(fortnight.endDate)}`, 10, 38);
@@ -4722,7 +4728,7 @@
 
             // Create table data
             const tableData = [];
-            
+
             // Add header row
             const headerRow = ['Worker', 'Role'];
             dates.forEach(date => {
@@ -4746,7 +4752,7 @@
                         a.siteId === siteId &&
                         a.date === date
                     );
-                    
+
                     if (attendance) {
                         if (attendance.status === 'P') {
                             row.push('P');
@@ -4771,7 +4777,7 @@
             // Add summary row
             const totalDays = dates.length * workers.length;
             const notMarked = totalDays - presentTotal - absentTotal;
-            
+
             tableData.push(['SUMMARY', '', ...Array(dates.length).fill(''), '']);
             tableData.push(['Present', presentTotal, ...Array(dates.length).fill(''), '']);
             tableData.push(['Absent', absentTotal, ...Array(dates.length).fill(''), '']);
@@ -4794,17 +4800,17 @@
                     [dates.length + 2]: { cellWidth: 25 }
                 },
                 margin: { left: 10, right: 10 },
-                didDrawPage: function(data) {
+                didDrawPage: function (data) {
                     // Draw summary
                     const summaryY = data.cursor.y + 10;
                     doc.setFontSize(10);
                     doc.setFont(undefined, 'bold');
-                    
+
                     doc.text('Attendance Summary:', 10, summaryY);
                     doc.text(`Present: ${presentTotal}`, 10, summaryY + 8);
                     doc.text(`Absent: ${absentTotal}`, 10, summaryY + 16);
                     doc.text(`Not Marked: ${notMarked}`, 10, summaryY + 24);
-                    
+
                     // Footer
                     doc.setFontSize(8);
                     doc.setFont(undefined, 'normal');
@@ -4904,22 +4910,22 @@
 
             // Create rate rows
             const rateKeys = [
-                'bricklayer', 'bricklayerOvertime', 
-                'labour', 'labourOvertime', 
-                'foremen', 'foremenOvertime', 
+                'bricklayer', 'bricklayerOvertime',
+                'labour', 'labourOvertime',
+                'foremen', 'foremenOvertime',
                 'transport', 'normalHours'
             ];
 
             rateKeys.forEach((key) => {
                 const row = ratesBody.insertRow();
                 const displayName = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
-                
+
                 row.innerHTML = `
                     <td>${displayName}</td>
                     <td><input type="number" class="editable-rate rate-input" id="rate-${key}" value="${appData.dayWorksRates[key]}" data-key="${key}" step="0.01" min="0"></td>
                     <td>${rateDescriptions[key] || ''}</td>
                 `;
-                
+
                 // Add event listener to rate input
                 const rateInput = document.getElementById(`rate-${key}`);
                 rateInput.addEventListener('change', handleRateChange);
@@ -4931,30 +4937,30 @@
             const input = event.target;
             const key = input.getAttribute('data-key');
             const value = parseFloat(input.value) || 0;
-            
+
             // Update the rates object
             appData.dayWorksRates[key] = value;
-            
+
             // Show warning that changes need to be saved
-            document.getElementById('ratesUpdated').innerHTML = 
+            document.getElementById('ratesUpdated').innerHTML =
                 '<span style="color: #e74c3c;">Rates edited - click "Save Rate Changes" to apply to all calculations</span>';
         }
 
         // Save rate changes
         function saveRateChanges() {
             saveData();
-            
+
             // Update the last saved timestamp
             const now = new Date();
-            const timeString = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
-            document.getElementById('ratesUpdated').innerHTML = 
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            document.getElementById('ratesUpdated').innerHTML =
                 `Rates last updated: ${timeString} - All calculations updated`;
-            
+
             // Recalculate day works if loaded
             if (currentState.currentDayWorksSite && currentState.currentDayWorksFortnight) {
                 loadDayWorksFromAttendance();
             }
-            
+
             showNotification('Rates saved successfully', 'success');
         }
 
@@ -4988,9 +4994,9 @@
             }
 
             // Get attendance data for this site and fortnight
-            const attendanceRecords = appData.attendance.filter(a => 
-                a.siteId === siteId && 
-                dates.includes(a.date) && 
+            const attendanceRecords = appData.attendance.filter(a =>
+                a.siteId === siteId &&
+                dates.includes(a.date) &&
                 a.status === 'P'
             );
 
@@ -5078,10 +5084,10 @@
             data.forEach((rowData, index) => {
                 const row = tbody.insertRow();
                 const dayOfWeek = getDayOfWeek(rowData.date);
-                
+
                 // Calculate total for this row
                 const calculation = calculateDayWorksRowTotal(rowData);
-                
+
                 row.innerHTML = `
                     <td>
                         <input type="text" class="editable date-input" value="${formatDateShort(rowData.date)}" data-index="${index}" data-field="date">
@@ -5095,7 +5101,7 @@
                     <td><input type="number" class="editable overtime-input" value="${rowData.overtime}" data-index="${index}" data-field="overtime" min="0" step="0.5"></td>
                     <td class="total-cell" id="dayworks-total-${index}">${formatCurrency(calculation.total)}</td>
                 `;
-                
+
                 // Add event listeners to the inputs for real-time calculation
                 const inputs = row.querySelectorAll('input');
                 inputs.forEach(input => {
@@ -5109,45 +5115,45 @@
             updateDayWorksTotals();
         }
 
-// Calculate day works row total - FIXED VERSION
-function calculateDayWorksRowTotal(rowData) {
-    // Get values from the row, default to 0 if empty
-    const bricklayer = parseFloat(rowData.bricklayer) || 0;
-    const labourers = parseFloat(rowData.labourers) || 0;
-    const foreman = parseFloat(rowData.foreman) || 0;
-    const transport = parseFloat(rowData.transport) || 0;
-    const hours = parseFloat(rowData.hours) || 0;
-    const overtime = parseFloat(rowData.overtime) || 0;
-    
-    // Calculate costs using current rates
-    // NORMAL HOURS: hours at normal rate
-    // OVERTIME HOURS: overtime at overtime rate
-    const bricklayerCost = (bricklayer * hours * appData.dayWorksRates.bricklayer) + 
-                          (bricklayer * overtime * appData.dayWorksRates.bricklayerOvertime);
-    
-    const labourersCost = (labourers * hours * appData.dayWorksRates.labour) + 
-                         (labourers * overtime * appData.dayWorksRates.labourOvertime);
-    
-    const foremanCost = (foreman * hours * appData.dayWorksRates.foremen) + 
-                       (foreman * overtime * appData.dayWorksRates.foremenOvertime);
-    
-    const transportCost = transport * appData.dayWorksRates.transport;
-    
-    // Total cost
-    const total = bricklayerCost + labourersCost + foremanCost + transportCost;
-    
-    return {
-        total: Math.round(total * 100) / 100,
-        breakdown: {
-            bricklayerCost: Math.round(bricklayerCost * 100) / 100,
-            labourersCost: Math.round(labourersCost * 100) / 100,
-            foremanCost: Math.round(foremanCost * 100) / 100,
-            transportCost: Math.round(transportCost * 100) / 100,
-            normalHours: hours,
-            overtimeHours: overtime
+        // Calculate day works row total - FIXED VERSION
+        function calculateDayWorksRowTotal(rowData) {
+            // Get values from the row, default to 0 if empty
+            const bricklayer = parseFloat(rowData.bricklayer) || 0;
+            const labourers = parseFloat(rowData.labourers) || 0;
+            const foreman = parseFloat(rowData.foreman) || 0;
+            const transport = parseFloat(rowData.transport) || 0;
+            const hours = parseFloat(rowData.hours) || 0;
+            const overtime = parseFloat(rowData.overtime) || 0;
+
+            // Calculate costs using current rates
+            // NORMAL HOURS: hours at normal rate
+            // OVERTIME HOURS: overtime at overtime rate
+            const bricklayerCost = (bricklayer * hours * appData.dayWorksRates.bricklayer) +
+                (bricklayer * overtime * appData.dayWorksRates.bricklayerOvertime);
+
+            const labourersCost = (labourers * hours * appData.dayWorksRates.labour) +
+                (labourers * overtime * appData.dayWorksRates.labourOvertime);
+
+            const foremanCost = (foreman * hours * appData.dayWorksRates.foremen) +
+                (foreman * overtime * appData.dayWorksRates.foremenOvertime);
+
+            const transportCost = transport * appData.dayWorksRates.transport;
+
+            // Total cost
+            const total = bricklayerCost + labourersCost + foremanCost + transportCost;
+
+            return {
+                total: Math.round(total * 100) / 100,
+                breakdown: {
+                    bricklayerCost: Math.round(bricklayerCost * 100) / 100,
+                    labourersCost: Math.round(labourersCost * 100) / 100,
+                    foremanCost: Math.round(foremanCost * 100) / 100,
+                    transportCost: Math.round(transportCost * 100) / 100,
+                    normalHours: hours,
+                    overtimeHours: overtime
+                }
+            };
         }
-    };
-}
 
         // Handle day works input changes
         function handleDayWorksInputChange(event) {
@@ -5155,13 +5161,13 @@ function calculateDayWorksRowTotal(rowData) {
             const index = input.getAttribute('data-index');
             const field = input.getAttribute('data-field');
             const value = input.value;
-            
+
             // Update the data array
             appData.dayWorksData[index][field] = field === 'date' ? value : parseFloat(value) || 0;
-            
+
             // Recalculate and update the total for this row
             updateDayWorksRowTotal(index);
-            
+
             // Update totals
             updateDayWorksTotals();
         }
@@ -5169,7 +5175,7 @@ function calculateDayWorksRowTotal(rowData) {
         // Update day works row total
         function updateDayWorksRowTotal(index) {
             if (!appData.dayWorksData[index]) return;
-            
+
             const calculation = calculateDayWorksRowTotal(appData.dayWorksData[index]);
             const totalCell = document.getElementById(`dayworks-total-${index}`);
             if (totalCell) {
@@ -5186,7 +5192,7 @@ function calculateDayWorksRowTotal(rowData) {
             let totalHours = 0;
             let totalOvertime = 0;
             let grandTotal = 0;
-            
+
             appData.dayWorksData.forEach((data, index) => {
                 const bricklayer = parseFloat(data.bricklayer) || 0;
                 const labourers = parseFloat(data.labourers) || 0;
@@ -5194,18 +5200,18 @@ function calculateDayWorksRowTotal(rowData) {
                 const transport = parseFloat(data.transport) || 0;
                 const hours = parseFloat(data.hours) || 0;
                 const overtime = parseFloat(data.overtime) || 0;
-                
+
                 totalBricklayer += bricklayer;
                 totalLabourers += labourers;
                 totalForeman += foreman;
                 totalTransport += transport;
                 totalHours += hours;
                 totalOvertime += overtime;
-                
+
                 const calculation = calculateDayWorksRowTotal(data);
                 grandTotal += calculation.total;
             });
-            
+
             // Update totals row
             document.getElementById('total-bricklayer').textContent = totalBricklayer;
             document.getElementById('total-labourers').textContent = totalLabourers;
@@ -5258,12 +5264,12 @@ function calculateDayWorksRowTotal(rowData) {
             table.style.borderCollapse = 'collapse';
             table.style.fontFamily = 'Arial, sans-serif';
             table.style.fontSize = '14px';
-            
+
             // Create header
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
             const headers = ['Date', 'Day', 'Bricklayer', 'Labourers', 'Foreman', 'Transport'];
-            
+
             headers.forEach(headerText => {
                 const th = document.createElement('th');
                 th.textContent = headerText;
@@ -5274,13 +5280,13 @@ function calculateDayWorksRowTotal(rowData) {
                 th.style.border = '1px solid #ddd';
                 headerRow.appendChild(th);
             });
-            
+
             thead.appendChild(headerRow);
             table.appendChild(thead);
-            
+
             // Create body
             const tbody = document.createElement('tbody');
-            
+
             appData.dayWorksData.forEach(data => {
                 if (data.bricklayer > 0 || data.labourers > 0 || data.foreman > 0) {
                     const row = document.createElement('tr');
@@ -5292,7 +5298,7 @@ function calculateDayWorksRowTotal(rowData) {
                         data.foreman,
                         data.transport
                     ];
-                    
+
                     cells.forEach((cellText, index) => {
                         const td = document.createElement('td');
                         td.textContent = cellText;
@@ -5303,13 +5309,13 @@ function calculateDayWorksRowTotal(rowData) {
                         }
                         row.appendChild(td);
                     });
-                    
+
                     tbody.appendChild(row);
                 }
             });
-            
+
             table.appendChild(tbody);
-            
+
             // Add title
             const container = document.createElement('div');
             const title = document.createElement('h2');
@@ -5317,33 +5323,33 @@ function calculateDayWorksRowTotal(rowData) {
             title.style.textAlign = 'center';
             title.style.color = '#2c3e50';
             title.style.marginBottom = '15px';
-            
+
             const dateStamp = document.createElement('div');
             dateStamp.textContent = 'Generated: ' + new Date().toLocaleDateString();
             dateStamp.style.textAlign = 'center';
             dateStamp.style.color = '#7f8c8d';
             dateStamp.style.marginBottom = '20px';
             dateStamp.style.fontSize = '12px';
-            
+
             container.appendChild(title);
             container.appendChild(dateStamp);
             container.appendChild(table);
-            
+
             document.body.appendChild(container);
-            
+
             html2canvas(container, {
                 scale: 2,
                 backgroundColor: '#ffffff',
                 logging: false
             }).then(canvas => {
                 document.body.removeChild(container);
-                
+
                 const link = document.createElement('a');
-                link.download = 'DayWorks_Client_Report_' + new Date().toISOString().slice(0,10) + '.png';
+                link.download = 'DayWorks_Client_Report_' + new Date().toISOString().slice(0, 10) + '.png';
                 link.href = canvas.toDataURL('image/png');
                 link.click();
             });
-            
+
             showNotification('Client report exported', 'success');
         }
 
@@ -5364,14 +5370,14 @@ function calculateDayWorksRowTotal(rowData) {
 
             const originalTable = document.getElementById('dayWorksTable');
             const clonedTable = originalTable.cloneNode(true);
-            
+
             // Remove input elements and show values
             clonedTable.querySelectorAll('input').forEach(input => {
                 const td = input.parentElement;
                 td.textContent = input.value;
                 td.style.padding = '6px 8px';
             });
-            
+
             // Create container
             const container = document.createElement('div');
             const title = document.createElement('h2');
@@ -5379,33 +5385,33 @@ function calculateDayWorksRowTotal(rowData) {
             title.style.textAlign = 'center';
             title.style.color = '#2c3e50';
             title.style.marginBottom = '15px';
-            
+
             const dateStamp = document.createElement('div');
             dateStamp.textContent = 'Generated: ' + new Date().toLocaleDateString();
             dateStamp.style.textAlign = 'center';
             dateStamp.style.color = '#7f8c8d';
             dateStamp.style.marginBottom = '20px';
             dateStamp.style.fontSize = '12px';
-            
+
             container.appendChild(title);
             container.appendChild(dateStamp);
             container.appendChild(clonedTable);
-            
+
             document.body.appendChild(container);
-            
+
             html2canvas(container, {
                 scale: 2,
                 backgroundColor: '#ffffff',
                 logging: false
             }).then(canvas => {
                 document.body.removeChild(container);
-                
+
                 const link = document.createElement('a');
-                link.download = 'DayWorks_Full_Report_' + new Date().toISOString().slice(0,10) + '.png';
+                link.download = 'DayWorks_Full_Report_' + new Date().toISOString().slice(0, 10) + '.png';
                 link.href = canvas.toDataURL('image/png');
                 link.click();
             });
-            
+
             showNotification('Full report exported', 'success');
         }
 
@@ -5677,7 +5683,7 @@ function calculateDayWorksRowTotal(rowData) {
 
             payrollData.forEach(data => {
                 const row = document.createElement('tr');
-                
+
                 // Determine row class based on loans/credit
                 let rowClass = '';
                 if (data.loans > 0 && data.credit > 0) {
@@ -5689,7 +5695,7 @@ function calculateDayWorksRowTotal(rowData) {
                 }
 
                 row.className = rowClass;
-                
+
                 row.innerHTML = `
                     <td>${data.worker.name} ${data.worker.surname}</td>
                     <td>${data.worker.role}</td>
@@ -5765,7 +5771,7 @@ function calculateDayWorksRowTotal(rowData) {
                 );
                 const paidCount = paymentsForPeriod.filter(p => p.status === 'paid').length;
                 const pendingCount = paymentsForPeriod.filter(p => p.status === 'pending').length;
-                document.getElementById('paymentSummary').textContent = 
+                document.getElementById('paymentSummary').textContent =
                     `${paidCount} paid, ${pendingCount} pending`;
             }
         }
@@ -5951,8 +5957,8 @@ function calculateDayWorksRowTotal(rowData) {
             }
 
             // Use selected sites or all active sites
-            const selectedSiteIds = appData.selectedSites.length > 0 
-                ? appData.selectedSites 
+            const selectedSiteIds = appData.selectedSites.length > 0
+                ? appData.selectedSites
                 : appData.sites.filter(s => s.active).map(s => s.id);
 
             if (selectedSiteIds.length === 0) {
@@ -6057,7 +6063,7 @@ function calculateDayWorksRowTotal(rowData) {
 
             payrollData.forEach(data => {
                 const row = document.createElement('tr');
-                
+
                 // Determine row class based on loans/credit
                 let rowClass = '';
                 if (data.loans > 0 && data.credit > 0) {
@@ -6069,7 +6075,7 @@ function calculateDayWorksRowTotal(rowData) {
                 }
 
                 row.className = rowClass;
-                
+
                 row.innerHTML = `
                     <td>${data.worker.name} ${data.worker.surname}</td>
                     <td>${data.worker.bank} ${data.worker.account}</td>
@@ -6177,7 +6183,7 @@ function calculateDayWorksRowTotal(rowData) {
             });
 
             updatePaymentsTotals(totalNet);
-            document.getElementById('paymentsStatusSummary').textContent = 
+            document.getElementById('paymentsStatusSummary').textContent =
                 `${paidCount} paid, ${pendingCount} pending`;
         }
 
@@ -6204,7 +6210,7 @@ function calculateDayWorksRowTotal(rowData) {
                 const workerId = select.dataset.workerId;
                 const netPay = select.closest('tr').querySelector('td:nth-child(9)').textContent
                     .replace('R', '').replace(/,/g, '');
-                
+
                 select.value = 'paid';
                 updatePaymentStatus(workerId, netPay);
             });
@@ -6217,14 +6223,14 @@ function calculateDayWorksRowTotal(rowData) {
             document.getElementById('paymentsTotalNet').textContent = 'R' + totalNet.toLocaleString();
         }
 
-        
+
 
         // Export payroll PDF (FIXED for combined sites)
         function exportPayrollPDF() {
             // Check which sub-tab is active
             const activeSubTab = document.querySelector('#payroll .sub-tab.active');
             const isCombined = activeSubTab && activeSubTab.textContent.includes('Combined');
-            
+
             if (isCombined) {
                 exportCombinedPayrollPDF();
             } else {
@@ -6236,7 +6242,9 @@ function calculateDayWorksRowTotal(rowData) {
 
 
 
-                 // Export single site payroll PDF - SIMPLE VERSION
+
+
+        // Export single site payroll PDF - with loan/credit highlighting
         function exportSinglePayrollPDF() {
             const table = document.getElementById('payrollTable');
             const siteId = document.getElementById('payrollSite').value;
@@ -6258,11 +6266,11 @@ function calculateDayWorksRowTotal(rowData) {
             // Header
             doc.setFillColor(26, 54, 93);
             doc.rect(0, 0, 297, 20, 'F');
-            
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(16);
             doc.text('TONNY LAYS CONSTRUCTION - PAYROLL', 148, 12, { align: 'center' });
-            
+
             doc.setTextColor(0, 0, 0);
             doc.setFontSize(12);
             doc.text(`Site: ${site.name}`, 10, 30);
@@ -6283,15 +6291,28 @@ function calculateDayWorksRowTotal(rowData) {
                     const loans = cells[6].textContent.trim();
                     const credit = cells[7].textContent.trim();
                     const netPay = cells[8].textContent.trim();
-                    
+
+                    // Determine row class for highlighting
+                    let rowClass = '';
+                    if (loans !== '-' && parseFloat(loans.replace('R', '').replace(/,/g, '')) > 0) {
+                        if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                            rowClass = 'has-both';
+                        } else {
+                            rowClass = 'has-loan';
+                        }
+                    } else if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                        rowClass = 'has-credit';
+                    }
+
                     rows.push({
                         data: [workerName, role, bankDetails, days, rate, gross, loans, credit, netPay],
                         role: role,
-                        name: workerName
+                        name: workerName,
+                        rowClass: rowClass
                     });
                 }
             });
-            
+
             // Sort by Role, then Name
             rows.sort((a, b) => {
                 if (a.role !== b.role) return a.role.localeCompare(b.role);
@@ -6301,12 +6322,12 @@ function calculateDayWorksRowTotal(rowData) {
             // Prepare table data
             const tableData = [];
             tableData.push(['Worker', 'Role', 'Bank Details', 'Days', 'Rate', 'Gross', 'Loans', 'Credit', 'Net Pay']);
-            
+
             rows.forEach(item => tableData.push(item.data));
 
             // Add totals row
             const totalRow = [
-                'TOTAL', '', '', '', '', 
+                'TOTAL', '', '', '', '',
                 document.getElementById('totalGross').textContent,
                 document.getElementById('totalLoans').textContent,
                 document.getElementById('totalCredit').textContent,
@@ -6314,7 +6335,7 @@ function calculateDayWorksRowTotal(rowData) {
             ];
             tableData.push(totalRow);
 
-            // Create table
+            // Create table with row highlighting
             doc.autoTable({
                 startY: 55,
                 head: [tableData[0]],
@@ -6335,20 +6356,41 @@ function calculateDayWorksRowTotal(rowData) {
                     7: { cellWidth: 25 },
                     8: { cellWidth: 25 }
                 },
-                margin: { left: 10, right: 10 }
+                margin: { left: 10, right: 10 },
+                didDrawCell: function (data) {
+                    // Apply highlighting to rows based on class
+                    if (data.section === 'body') {
+                        const rowIndex = data.row.index;
+                        const rowData = rows[rowIndex];
+                        if (rowData) {
+                            if (rowData.rowClass === 'has-loan') {
+                                doc.setFillColor(255, 243, 205); // Light yellow
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            } else if (rowData.rowClass === 'has-credit') {
+                                doc.setFillColor(209, 236, 241); // Light blue
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            } else if (rowData.rowClass === 'has-both') {
+                                // Gradient effect not possible, use a light purple
+                                doc.setFillColor(230, 230, 250); // Light purple
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            }
+                        }
+                    }
+                }
             });
 
             doc.save(`Payroll_${site.name}_${fortnight.startDate}.pdf`);
             showNotification('Payroll PDF exported successfully', 'success');
-        }       
+        }
 
 
 
 
 
-
-
-                // Export combined payroll PDF - SIMPLE VERSION
+        // Export combined payroll PDF - with loan/credit highlighting
         function exportCombinedPayrollPDF() {
             const startDate = document.getElementById('combinedStartDate').value;
             const endDate = document.getElementById('combinedEndDate').value;
@@ -6364,16 +6406,16 @@ function calculateDayWorksRowTotal(rowData) {
             // Header
             doc.setFillColor(26, 54, 93);
             doc.rect(0, 0, 297, 20, 'F');
-            
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(16);
             doc.text('TONNY LAYS CONSTRUCTION - COMBINED PAYROLL', 148, 12, { align: 'center' });
-            
+
             doc.setTextColor(0, 0, 0);
             doc.setFontSize(12);
             doc.text(`Period: ${formatDate(startDate)} - ${formatDate(endDate)}`, 10, 30);
-            
-            const selectedSites = appData.selectedSites.length > 0 
+
+            const selectedSites = appData.selectedSites.length > 0
                 ? appData.selectedSites.map(id => appData.sites.find(s => s.id === id)?.name).join(', ')
                 : 'All Active Sites';
             doc.text(`Sites: ${selectedSites}`, 10, 38);
@@ -6382,7 +6424,7 @@ function calculateDayWorksRowTotal(rowData) {
             // Get rows and sort
             const rows = [];
             const table = document.getElementById('combinedPayrollTable');
-            
+
             table.querySelectorAll('tbody tr').forEach(tr => {
                 const cells = tr.querySelectorAll('td');
                 if (cells.length >= 9) {
@@ -6395,17 +6437,30 @@ function calculateDayWorksRowTotal(rowData) {
                     const loans = cells[6].textContent.trim();
                     const credit = cells[7].textContent.trim();
                     const netPay = cells[8].textContent.trim();
-                    
+
                     const worker = appData.workers.find(w => `${w.name} ${w.surname}` === workerName);
-                    
+
+                    // Determine row class for highlighting
+                    let rowClass = '';
+                    if (loans !== '-' && parseFloat(loans.replace('R', '').replace(/,/g, '')) > 0) {
+                        if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                            rowClass = 'has-both';
+                        } else {
+                            rowClass = 'has-loan';
+                        }
+                    } else if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                        rowClass = 'has-credit';
+                    }
+
                     rows.push({
                         data: [workerName, bankDetails, sitesWorked, totalDays, avgRate, gross, loans, credit, netPay],
                         role: worker ? worker.role : 'Unknown',
-                        name: workerName
+                        name: workerName,
+                        rowClass: rowClass
                     });
                 }
             });
-            
+
             rows.sort((a, b) => {
                 if (a.role !== b.role) return a.role.localeCompare(b.role);
                 return a.name.localeCompare(b.name);
@@ -6423,7 +6478,7 @@ function calculateDayWorksRowTotal(rowData) {
             const totalNet = document.getElementById('combinedTotalNet').textContent;
             tableData.push(['TOTAL', '', '', '', '', totalGross, totalLoans, totalCredit, totalNet]);
 
-            // Create table
+            // Create table with row highlighting
             doc.autoTable({
                 startY: 55,
                 head: [tableData[0]],
@@ -6443,6 +6498,30 @@ function calculateDayWorksRowTotal(rowData) {
                     6: { cellWidth: 25 },
                     7: { cellWidth: 25 },
                     8: { cellWidth: 25 }
+                },
+                margin: { left: 10, right: 10 },
+                didDrawCell: function (data) {
+                    // Apply highlighting to rows based on class
+                    if (data.section === 'body') {
+                        const rowIndex = data.row.index;
+                        const rowData = rows[rowIndex];
+                        if (rowData) {
+                            if (rowData.rowClass === 'has-loan') {
+                                doc.setFillColor(255, 243, 205); // Light yellow
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            } else if (rowData.rowClass === 'has-credit') {
+                                doc.setFillColor(209, 236, 241); // Light blue
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            } else if (rowData.rowClass === 'has-both') {
+                                // Gradient effect not possible, use a light purple
+                                doc.setFillColor(230, 230, 250); // Light purple
+                                doc.rect(data.cell.x, data.cell.y, data.cell.width, data.cell.height, 'F');
+                                doc.setTextColor(0, 0, 0);
+                            }
+                        }
+                    }
                 }
             });
 
@@ -6453,7 +6532,7 @@ function calculateDayWorksRowTotal(rowData) {
 
 
 
-        
+
 
 
 
@@ -6463,7 +6542,7 @@ function calculateDayWorksRowTotal(rowData) {
             // Check which sub-tab is active
             const activeSubTab = document.querySelector('#payroll .sub-tab.active');
             const isCombined = activeSubTab && activeSubTab.textContent.includes('Combined');
-            
+
             if (isCombined) {
                 exportCombinedPayrollImage();
             } else {
@@ -6476,9 +6555,8 @@ function calculateDayWorksRowTotal(rowData) {
 
 
 
-        
 
-                // Export single site payroll image - SIMPLE VERSION
+        // Export single site payroll image - with loan/credit highlighting
         function exportSinglePayrollImage() {
             const table = document.getElementById('payrollTable');
             const siteId = document.getElementById('payrollSite').value;
@@ -6508,7 +6586,7 @@ function calculateDayWorksRowTotal(rowData) {
             header.style.background = 'linear-gradient(135deg, #1a365d, #2b6cb0)';
             header.style.color = 'white';
             header.style.borderRadius = '10px';
-            
+
             header.innerHTML = `
                 <h2 style="margin: 0 0 10px 0;">TONNY LAYS CONSTRUCTION</h2>
                 <h3 style="margin: 0 0 10px 0;">PAYROLL REPORT</h3>
@@ -6532,15 +6610,28 @@ function calculateDayWorksRowTotal(rowData) {
                     const loans = cells[6].textContent.trim();
                     const credit = cells[7].textContent.trim();
                     const netPay = cells[8].textContent.trim();
-                    
+
+                    // Determine row class for highlighting
+                    let rowClass = '';
+                    if (loans !== '-' && parseFloat(loans.replace('R', '').replace(/,/g, '')) > 0) {
+                        if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                            rowClass = 'has-both';
+                        } else {
+                            rowClass = 'has-loan';
+                        }
+                    } else if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                        rowClass = 'has-credit';
+                    }
+
                     rows.push({
                         data: [workerName, role, bankDetails, days, rate, gross, loans, credit, netPay],
                         role: role,
-                        name: workerName
+                        name: workerName,
+                        rowClass: rowClass
                     });
                 }
             });
-            
+
             rows.sort((a, b) => {
                 if (a.role !== b.role) return a.role.localeCompare(b.role);
                 return a.name.localeCompare(b.name);
@@ -6551,7 +6642,7 @@ function calculateDayWorksRowTotal(rowData) {
             tableElement.style.width = '100%';
             tableElement.style.borderCollapse = 'collapse';
             tableElement.style.border = '1px solid #ddd';
-            
+
             // Header
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
@@ -6568,17 +6659,38 @@ function calculateDayWorksRowTotal(rowData) {
             thead.appendChild(headerRow);
             tableElement.appendChild(thead);
 
-            // Body
+            // Body with highlighting
             const tbody = document.createElement('tbody');
             rows.forEach(item => {
                 const row = document.createElement('tr');
+
+                // Set row background color based on class
+                let bgColor = '';
+                if (item.rowClass === 'has-loan') {
+                    bgColor = '#fff3cd'; // Light yellow
+                } else if (item.rowClass === 'has-credit') {
+                    bgColor = '#d1ecf1'; // Light blue
+                } else if (item.rowClass === 'has-both') {
+                    bgColor = 'linear-gradient(135deg, #fff3cd, #d1ecf1)';
+                }
+
                 item.data.forEach((value, index) => {
                     const td = document.createElement('td');
                     td.textContent = value;
                     td.style.padding = '6px';
                     td.style.border = '1px solid #ddd';
                     td.style.color = 'black';
-                    if (tbody.children.length % 2 === 0) td.style.backgroundColor = '#f9f9f9';
+
+                    if (bgColor) {
+                        if (bgColor.startsWith('linear-gradient')) {
+                            td.style.background = bgColor;
+                        } else {
+                            td.style.backgroundColor = bgColor;
+                        }
+                    } else if (tbody.children.length % 2 === 0) {
+                        td.style.backgroundColor = '#f9f9f9';
+                    }
+
                     row.appendChild(td);
                 });
                 tbody.appendChild(row);
@@ -6588,21 +6700,21 @@ function calculateDayWorksRowTotal(rowData) {
             // Footer
             const tfoot = document.createElement('tfoot');
             const footerRow = document.createElement('tr');
-            ['TOTAL', '', '', '', '', 
-             document.getElementById('totalGross').textContent,
-             document.getElementById('totalLoans').textContent,
-             document.getElementById('totalCredit').textContent,
-             document.getElementById('totalNet').textContent].forEach((text, index) => {
-                const td = document.createElement('td');
-                td.textContent = text;
-                td.style.padding = '8px';
-                td.style.border = '1px solid #ddd';
-                td.style.backgroundColor = '#1a365d';
-                td.style.color = 'white';
-                td.style.fontWeight = 'bold';
-                td.style.textAlign = index === 0 ? 'left' : 'right';
-                footerRow.appendChild(td);
-            });
+            ['TOTAL', '', '', '', '',
+                document.getElementById('totalGross').textContent,
+                document.getElementById('totalLoans').textContent,
+                document.getElementById('totalCredit').textContent,
+                document.getElementById('totalNet').textContent].forEach((text, index) => {
+                    const td = document.createElement('td');
+                    td.textContent = text;
+                    td.style.padding = '8px';
+                    td.style.border = '1px solid #ddd';
+                    td.style.backgroundColor = '#1a365d';
+                    td.style.color = 'white';
+                    td.style.fontWeight = 'bold';
+                    td.style.textAlign = index === 0 ? 'left' : 'right';
+                    footerRow.appendChild(td);
+                });
             tfoot.appendChild(footerRow);
             tableElement.appendChild(tfoot);
 
@@ -6637,8 +6749,7 @@ function calculateDayWorksRowTotal(rowData) {
 
 
 
-
-                        // Export combined payroll image - SIMPLE VERSION
+        // Export combined payroll image - with loan/credit highlighting
         function exportCombinedPayrollImage() {
             const startDate = document.getElementById('combinedStartDate').value;
             const endDate = document.getElementById('combinedEndDate').value;
@@ -6662,11 +6773,11 @@ function calculateDayWorksRowTotal(rowData) {
             header.style.background = 'linear-gradient(135deg, #1a365d, #2b6cb0)';
             header.style.color = 'white';
             header.style.borderRadius = '10px';
-            
-            const selectedSites = appData.selectedSites.length > 0 
+
+            const selectedSites = appData.selectedSites.length > 0
                 ? appData.selectedSites.map(id => appData.sites.find(s => s.id === id)?.name).join(', ')
                 : 'All Active Sites';
-            
+
             header.innerHTML = `
                 <h2 style="margin: 0 0 10px 0;">TONNY LAYS CONSTRUCTION</h2>
                 <h3 style="margin: 0 0 10px 0;">COMBINED PAYROLL REPORT</h3>
@@ -6679,7 +6790,7 @@ function calculateDayWorksRowTotal(rowData) {
             // Get rows and sort
             const rows = [];
             const table = document.getElementById('combinedPayrollTable');
-            
+
             table.querySelectorAll('tbody tr').forEach(tr => {
                 const cells = tr.querySelectorAll('td');
                 if (cells.length >= 9) {
@@ -6692,17 +6803,30 @@ function calculateDayWorksRowTotal(rowData) {
                     const loans = cells[6].textContent.trim();
                     const credit = cells[7].textContent.trim();
                     const netPay = cells[8].textContent.trim();
-                    
+
                     const worker = appData.workers.find(w => `${w.name} ${w.surname}` === workerName);
-                    
+
+                    // Determine row class for highlighting
+                    let rowClass = '';
+                    if (loans !== '-' && parseFloat(loans.replace('R', '').replace(/,/g, '')) > 0) {
+                        if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                            rowClass = 'has-both';
+                        } else {
+                            rowClass = 'has-loan';
+                        }
+                    } else if (credit !== '-' && parseFloat(credit.replace('R', '').replace(/,/g, '')) > 0) {
+                        rowClass = 'has-credit';
+                    }
+
                     rows.push({
                         data: [workerName, bankDetails, sitesWorked, totalDays, avgRate, gross, loans, credit, netPay],
                         role: worker ? worker.role : 'Unknown',
-                        name: workerName
+                        name: workerName,
+                        rowClass: rowClass
                     });
                 }
             });
-            
+
             rows.sort((a, b) => {
                 if (a.role !== b.role) return a.role.localeCompare(b.role);
                 return a.name.localeCompare(b.name);
@@ -6713,7 +6837,7 @@ function calculateDayWorksRowTotal(rowData) {
             tableElement.style.width = '100%';
             tableElement.style.borderCollapse = 'collapse';
             tableElement.style.border = '1px solid #ddd';
-            
+
             // Header
             const thead = document.createElement('thead');
             const headerRow = document.createElement('tr');
@@ -6730,17 +6854,38 @@ function calculateDayWorksRowTotal(rowData) {
             thead.appendChild(headerRow);
             tableElement.appendChild(thead);
 
-            // Body
+            // Body with highlighting
             const tbody = document.createElement('tbody');
             rows.forEach(item => {
                 const row = document.createElement('tr');
+
+                // Set row background color based on class
+                let bgColor = '';
+                if (item.rowClass === 'has-loan') {
+                    bgColor = '#fff3cd'; // Light yellow
+                } else if (item.rowClass === 'has-credit') {
+                    bgColor = '#d1ecf1'; // Light blue
+                } else if (item.rowClass === 'has-both') {
+                    bgColor = 'linear-gradient(135deg, #fff3cd, #d1ecf1)';
+                }
+
                 item.data.forEach((value, index) => {
                     const td = document.createElement('td');
                     td.textContent = value;
                     td.style.padding = '6px';
                     td.style.border = '1px solid #ddd';
                     td.style.color = 'black';
-                    if (tbody.children.length % 2 === 0) td.style.backgroundColor = '#f9f9f9';
+
+                    if (bgColor) {
+                        if (bgColor.startsWith('linear-gradient')) {
+                            td.style.background = bgColor;
+                        } else {
+                            td.style.backgroundColor = bgColor;
+                        }
+                    } else if (tbody.children.length % 2 === 0) {
+                        td.style.backgroundColor = '#f9f9f9';
+                    }
+
                     row.appendChild(td);
                 });
                 tbody.appendChild(row);
@@ -6750,21 +6895,21 @@ function calculateDayWorksRowTotal(rowData) {
             // Footer
             const tfoot = document.createElement('tfoot');
             const footerRow = document.createElement('tr');
-            ['TOTAL', '', '', '', '', 
-             document.getElementById('combinedTotalGross').textContent,
-             document.getElementById('combinedTotalLoans').textContent,
-             document.getElementById('combinedTotalCredit').textContent,
-             document.getElementById('combinedTotalNet').textContent].forEach((text, index) => {
-                const td = document.createElement('td');
-                td.textContent = text;
-                td.style.padding = '8px';
-                td.style.border = '1px solid #ddd';
-                td.style.backgroundColor = '#1a365d';
-                td.style.color = 'white';
-                td.style.fontWeight = 'bold';
-                td.style.textAlign = index === 0 ? 'left' : 'right';
-                footerRow.appendChild(td);
-            });
+            ['TOTAL', '', '', '', '',
+                document.getElementById('combinedTotalGross').textContent,
+                document.getElementById('combinedTotalLoans').textContent,
+                document.getElementById('combinedTotalCredit').textContent,
+                document.getElementById('combinedTotalNet').textContent].forEach((text, index) => {
+                    const td = document.createElement('td');
+                    td.textContent = text;
+                    td.style.padding = '8px';
+                    td.style.border = '1px solid #ddd';
+                    td.style.backgroundColor = '#1a365d';
+                    td.style.color = 'white';
+                    td.style.fontWeight = 'bold';
+                    td.style.textAlign = index === 0 ? 'left' : 'right';
+                    footerRow.appendChild(td);
+                });
             tfoot.appendChild(footerRow);
             tableElement.appendChild(tfoot);
 
@@ -6790,7 +6935,7 @@ function calculateDayWorksRowTotal(rowData) {
             });
         }
 
-        
+
 
 
 
@@ -6862,11 +7007,11 @@ function calculateDayWorksRowTotal(rowData) {
             // Header
             doc.setFillColor(26, 54, 93);
             doc.rect(0, 0, 210, 20, 'F');
-            
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(16);
             doc.text('TONNY LAYS CONSTRUCTION - PAYROLL HISTORY', 105, 12, { align: 'center' });
-            
+
             doc.setFontSize(12);
             doc.text(`Site: ${site.name}`, 10, 30);
             doc.text(`Period: ${formatDate(fortnight.startDate)} - ${formatDate(fortnight.endDate)}`, 10, 38);
@@ -6874,7 +7019,7 @@ function calculateDayWorksRowTotal(rowData) {
 
             // Create table data
             const tableData = [['Worker', 'Role', 'Days', 'Gross', 'Loans', 'Credit', 'Net Pay']];
-            
+
             payroll.items.forEach(item => {
                 const worker = appData.workers.find(w => w.id === item.workerId);
                 if (worker) {
@@ -7253,7 +7398,7 @@ function calculateDayWorksRowTotal(rowData) {
             };
 
             appData.expenses.push(expense);
-            
+
             // If it's a recurring expense, also add to recurring expenses
             if (isRecurring) {
                 const recurringExpense = {
@@ -7427,13 +7572,13 @@ function calculateDayWorksRowTotal(rowData) {
 
             // Render transactions
             renderTransactionsList(filtered);
-            
+
             // Render recurring expenses
             renderRecurringExpenses();
 
             // Update summary
             updateTransactionsSummary();
-            
+
             // Update chart
             updateMonthlyChart();
         }
@@ -7454,7 +7599,7 @@ function calculateDayWorksRowTotal(rowData) {
                     'General';
 
                 const transactionClass = `transaction-card ${transaction.type} ${transaction.isRecurring ? 'recurring' : ''}`;
-                
+
                 html += `
                     <div class="${transactionClass}" style="margin-bottom: 10px;">
                         <div style="display: flex; justify-content: space-between; align-items: start;">
@@ -7499,7 +7644,7 @@ function calculateDayWorksRowTotal(rowData) {
             }
 
             let html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 15px;">';
-            
+
             activeRecurring.forEach(expense => {
                 const siteName = expense.siteId ?
                     appData.sites.find(s => s.id === expense.siteId)?.name || 'Unknown' :
@@ -7602,11 +7747,11 @@ function calculateDayWorksRowTotal(rowData) {
             // Header
             doc.setFillColor(26, 54, 93);
             doc.rect(0, 0, 210, 20, 'F');
-            
+
             doc.setTextColor(255, 255, 255);
             doc.setFontSize(16);
             doc.text('TONNY LAYS CONSTRUCTION - EXPENSES & INCOME', 105, 12, { align: 'center' });
-            
+
             doc.setFontSize(12);
             doc.setTextColor(0, 0, 0);
             doc.text(`Generated: ${new Date().toLocaleDateString()}`, 10, 30);
@@ -7615,7 +7760,7 @@ function calculateDayWorksRowTotal(rowData) {
             const typeFilter = document.getElementById('expenseTypeFilter').value;
             const periodFilter = document.getElementById('expensePeriodFilter').value;
             const siteFilter = document.getElementById('expenseSiteFilter').value;
-            
+
             let filtered = appData.expenses;
 
             if (typeFilter !== 'all' && typeFilter !== 'recurring') {
@@ -7629,7 +7774,7 @@ function calculateDayWorksRowTotal(rowData) {
 
             // Create table data
             const tableData = [['Date', 'Type', 'Category', 'Description', 'Site', 'Amount']];
-            
+
             let totalIncome = 0;
             let totalExpenses = 0;
 
@@ -7699,7 +7844,7 @@ function calculateDayWorksRowTotal(rowData) {
                     totalIncome += t.amount;
                 } else {
                     totalExpenses += t.amount;
-                    
+
                     // Calculate recurring monthly expenses
                     if (t.isRecurring && t.frequency === 'monthly') {
                         recurringMonthly += t.amount;
@@ -7726,26 +7871,26 @@ function calculateDayWorksRowTotal(rowData) {
         // Update monthly chart (simplified version)
         function updateMonthlyChart() {
             const chartDiv = document.getElementById('monthlyChart');
-            
+
             // Get current month's data
             const now = new Date();
             const currentMonth = now.getMonth();
             const currentYear = now.getFullYear();
-            
+
             const monthlyData = {};
-            
+
             // Initialize with last 6 months
             for (let i = 5; i >= 0; i--) {
                 const date = new Date(currentYear, currentMonth - i, 1);
                 const monthKey = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
                 monthlyData[monthKey] = { income: 0, expenses: 0 };
             }
-            
+
             // Calculate monthly totals
             appData.expenses.forEach(t => {
                 const date = new Date(t.date);
                 const monthKey = date.toLocaleDateString('en-US', { month: 'short', year: '2-digit' });
-                
+
                 if (monthlyData[monthKey]) {
                     if (t.type === 'income') {
                         monthlyData[monthKey].income += t.amount;
@@ -7754,21 +7899,21 @@ function calculateDayWorksRowTotal(rowData) {
                     }
                 }
             });
-            
+
             // Create simple HTML chart
             const months = Object.keys(monthlyData);
             const maxValue = Math.max(
                 ...Object.values(monthlyData).map(d => Math.max(d.income, d.expenses)),
                 1000 // Minimum scale
             );
-            
+
             let html = '<div style="display: flex; height: 150px; align-items: flex-end; gap: 15px; padding: 10px 0;">';
-            
+
             months.forEach(month => {
                 const data = monthlyData[month];
                 const incomeHeight = (data.income / maxValue) * 100;
                 const expenseHeight = (data.expenses / maxValue) * 100;
-                
+
                 html += `
                     <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%;">
                         <div style="display: flex; align-items: flex-end; height: 100%; width: 100%; gap: 3px;">
@@ -7779,13 +7924,13 @@ function calculateDayWorksRowTotal(rowData) {
                     </div>
                 `;
             });
-            
+
             html += '</div>';
             html += '<div style="display: flex; justify-content: center; gap: 20px; margin-top: 10px; font-size: 0.85rem;">';
             html += '<div><span style="display: inline-block; width: 12px; height: 12px; background: var(--success); margin-right: 5px;"></span> Income</div>';
             html += '<div><span style="display: inline-block; width: 12px; height: 12px; background: var(--danger); margin-right: 5px;"></span> Expenses</div>';
             html += '</div>';
-            
+
             chartDiv.innerHTML = html;
         }
 
